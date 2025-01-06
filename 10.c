@@ -4,16 +4,16 @@
 #define CIRCULAR_RIGHT_SHIFT(x, n) (((x) >> (n)) | ((x) << (2 * sizeof(x) * 8 - (n))))
 
 int main() {
-    unsigned int num = 0b10110011; // ÷èñëî
-    int n = 3; // ñäâèãà
+    unsigned int num = 0b10110011; // Ñ‡Ð¸ÑÐ»Ð¾
+    int n = 3; // ÑÐ´Ð²Ð¸Ð³Ð°
 
-    printf("Èñõîäíîå ÷èñëî: %u\n", num);
+    printf("Ð˜ÑÑ…Ð¾Ð´Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: %u\n", num);
 
     unsigned int left_shifted = CIRCULAR_LEFT_SHIFT(num, n);
     unsigned int right_shifted = CIRCULAR_RIGHT_SHIFT(num, n);
 
-    printf("Öèêëè÷åñêèé ñäâèã âëåâî íà %d áèò: %u\n", n, left_shifted);
-    printf("Öèêëè÷åñêèé ñäâèã âïðàâî íà %d áèò: %u\n", n, right_shifted);
+    printf("Ð¦Ð¸ÐºÐ»Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ ÑÐ´Ð²Ð¸Ð³ Ð²Ð»ÐµÐ²Ð¾ Ð½Ð° %d Ð±Ð¸Ñ‚: %u\n", n, left_shifted);
+    printf("Ð¦Ð¸ÐºÐ»Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ ÑÐ´Ð²Ð¸Ð³ Ð²Ð¿Ñ€Ð°Ð²Ð¾ Ð½Ð° %d Ð±Ð¸Ñ‚: %u\n", n, right_shifted);
 
     return 0;
 }
