@@ -4,8 +4,8 @@
 
 
 void xor_encrypt_decrypt(const char* input_file, const char* output_file, char key) {
-    FILE* fin = fopen(input_file, "rb"); // входной файл, который нужно зашифровать или расшифровать.
-    FILE* fout = fopen(output_file, "wb");// выходной файл, куда будет записан результат.
+    FILE* fin = fopen(input_file, "rb"); // РІС…РѕРґРЅРѕР№ С„Р°Р№Р», РєРѕС‚РѕСЂС‹Р№ РЅСѓР¶РЅРѕ Р·Р°С€РёС„СЂРѕРІР°С‚СЊ РёР»Рё СЂР°СЃС€РёС„СЂРѕРІР°С‚СЊ.
+    FILE* fout = fopen(output_file, "wb");// РІС‹С…РѕРґРЅРѕР№ С„Р°Р№Р», РєСѓРґР° Р±СѓРґРµС‚ Р·Р°РїРёСЃР°РЅ СЂРµР·СѓР»СЊС‚Р°С‚.
 
     if (!fin || !fout) {
         fprintf(stderr, "Error opening files.\n");
@@ -14,7 +14,7 @@ void xor_encrypt_decrypt(const char* input_file, const char* output_file, char k
 
     int byte;
     while ((byte = fgetc(fin)) != EOF) {
-        // Применяем XOR с ключом и записываем в выходной файл
+        // РџСЂРёРјРµРЅСЏРµРј XOR СЃ РєР»СЋС‡РѕРј Рё Р·Р°РїРёСЃС‹РІР°РµРј РІ РІС‹С…РѕРґРЅРѕР№ С„Р°Р№Р»
         fputc(byte ^ key, fout);
     }
 
